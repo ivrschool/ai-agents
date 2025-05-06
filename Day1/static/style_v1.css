@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+    background: #f4f4f9;
+    padding: 2em;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+.tabs a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+.tabs a.active {
+    background-color: #00b894;
+    color: white;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    background: #fff;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-left: 5px solid #00b894;
+}

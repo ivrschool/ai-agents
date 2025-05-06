@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thought of the Day</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_v1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌞 Thought Generator</h1>
+        <div class="tabs">
+            <a href="/today" class="{{ 'active' if tab == 'today' else '' }}">Thought of Today</a>
+            <a href="/tomorrow" class="{{ 'active' if tab == 'tomorrow' else '' }}">Thought of Tomorrow</a>
+        </div>
+        <ul>
+            {% if thoughts %}
+                {% for thought in thoughts %}
+                    <li>{{ thought }}</li>
+                {% endfor %}
+            {% else %}
+                <li>Select a tab to see thoughts.</li>
+            {% endif %}
+        </ul>
+    </div>
+</body>
+</html>
